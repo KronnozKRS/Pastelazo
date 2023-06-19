@@ -5,7 +5,6 @@
     --text-color: #cecccc ;
 }
 
-
 *{
     margin: 0;
     padding: 0;
@@ -15,6 +14,48 @@
 html{
     font-size: 62.5%;
     background-color: #beae9d;
+}
+
+/* slider */
+
+.slider {
+    border-bottom: 5px solid var(--primary-color) ;
+    overflow: hidden;
+    margin: 20px;
+    width: 90%;
+    border-radius: 10px ;
+}
+
+.slider img{
+    width: 100%;
+}
+
+.slider li{
+    width: 100%;
+}
+
+.slider ul{
+    width: 400%;
+    display: flex;
+    animation: deslizar 15s infinite alternate ;
+}
+
+@keyframes deslizar {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+.slider li{
+    width: 400%;
 }
 
 /* header */
@@ -73,23 +114,10 @@ nav{
     border-right: solid white white;
 }
 
-/* Location */
-
-.location i{
-    margin-right: 5px;
-    color: red;
-}
-
-.location{
-    font-size: 2rem;
-    text-align: center;
-    padding: 20px 0 0 0;
-    text-decoration: underline red 2px;
-}
-
 /* Main */
 
 .menu{
+    padding-top: 10px;
     display: flexbox;
     flex-wrap: wrap;
     padding-bottom: 35px;
@@ -194,6 +222,7 @@ nav{
 
 footer{
     background-color: var(--secundary-color);
+    display: flex;
 }
 
 .contact h3{
@@ -213,14 +242,43 @@ footer{
 }
 
 .contact h3, li{
-    text-align: center;
-    justify-content: center;
+    text-align: left;
+    justify-content: left;
 }
 
 .contact li{
     text-decoration: underline black;
     padding: 5px ;
     padding-bottom: 15px;
+}
+
+/* Location */
+
+.location i{
+    margin-right: 5px;
+    color: red;
+}
+
+.location{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+
+.location span{
+    color: darkgreen;
+}
+
+.location h2{
+    font-size: 2.6rem;
+    text-decoration: underline red;
+    margin-bottom: 5px;
+}
+
+.location p{
+    margin: 0 10px 5px 10px ;
+    font-size: 2rem ;
 }
 
 @media only screen and (min-width: 374px){
@@ -230,9 +288,30 @@ footer{
         min-height: 150px;
 }
 
+@media only screen and (min-width: 424px){
+
+.slider img{
+    width: 380px;
+    height: 250px;
+}
+
 }
 
 @media only screen and (min-width: 767px){
+
+.slider {
+    border-bottom: 5px solid var(--primary-color) ;
+    overflow: hidden;
+    margin: 50px 0 0 20px;
+    width: 90%;
+    border-bottom: none;
+}
+    
+.slider img{
+    background-color: var(--background-color);
+    border-radius: 10px;
+    width: 100%;
+}
 
 .menu-card{
     min-width: 300px;
@@ -281,6 +360,14 @@ footer{
 
 @media only screen and (min-width: 1000px)  {
 
+    .slider img{
+        background-color: var(--background-color);
+        border-radius: 10px;
+        width: 100%;
+        height: 450px;
+    }
+    
+
 .main-nav a{
     font-size: 3rem;
 }
@@ -323,4 +410,5 @@ footer{
     margin-left: 30px;
 }
 
+}
 }
