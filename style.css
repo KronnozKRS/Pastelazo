@@ -442,11 +442,12 @@ nav{
 
 
 .menu-card{
-        min-width: 300px;
-        min-height: 150px;
+    min-width: 300px;
+    min-height: 150px;
 }
 
 .menu-card:hover{
+    filter: brightness(1.7);
     transition: .5s ease all;
     transform: scale(1.2);
 }
