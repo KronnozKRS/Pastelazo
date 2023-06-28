@@ -17,6 +17,26 @@ html{
     background-color: #beae9d;
 }
 
+/* caution */
+
+.caution{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.caution i{
+    color: yellow;
+    animation: caution 1s infinite;
+    font-size: 1.8rem;
+    margin: 6px;
+}
+
+@keyframes caution {
+    50%{opacity: .3;}
+}
+
 /* slider */
 
 .slider {
@@ -174,7 +194,8 @@ nav{
 }
 
 .menu-card:nth-of-type(4){
-    background-image: linear-gradient(#000000ce, transparent), url(./assets/cupcake.jpg);
+    background-image: linear-gradient(#000000ce, transparent), url(./assets/cupcake-2.jpg);
+    background-position: center;
     background-size: cover;
 }
 
@@ -318,6 +339,15 @@ nav{
 
 @media only screen and (min-width: 767px){
 
+.caution i{
+    font-size: 2.5rem;
+}
+
+.caution{
+    margin-top: 25px;
+    font-size: 2rem;
+}
+
 .footer-cards{
     justify-content: space-evenly;
 }
@@ -329,7 +359,7 @@ nav{
 .slider {
     border-bottom: 5px solid var(--primary-color) ;
     overflow: hidden;
-    margin: 50px 0 0 20px;
+    margin: 50px 0 0 40px;
     width: 90%;
     border-bottom: none;
 }
