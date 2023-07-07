@@ -2,7 +2,7 @@
     --primary-color: #897e72;
     --secundary-color: #a29587;
     --background-color: #beae9d;
-    --text-color: #cecccc;
+    --text-color: #cecccc ;
 }
 
 *{
@@ -12,9 +12,11 @@
 }
 
 html{
+    scroll-behavior: smooth;
     font-size: 62.5%;
     background-color: #beae9d;
 }
+
 
 /* header */
 
@@ -54,7 +56,6 @@ nav{
     color: white;
     text-decoration: none;
     display: flex;
-
 }
 
 .main-nav li{
@@ -76,24 +77,41 @@ nav{
     border-right: solid white white;
 }
 
+/* Main */
+
 /* Menu desplegable */
+
+.bajada h2{
+    border-right: none;
+    background: #a29587;
+    background: -webkit-linear-gradient(to right, #4B1248, #a29587);
+    background: linear-gradient(to right, #4B1248, #a29587);
+    color: var(--text-color);
+}
 
 .bajada i{
     margin-left: 5px;
 }
+
 .bajada {
     display: inline-block;
     padding: 5px;
     font-size: 1.4rem;
     position: relative;
     margin-top: 20px;
-    margin-left: 5px;
+    margin-left: 20px;
     cursor: pointer;
-    background-color: var(--secundary-color);
+    background: #a29587;
+    background: -webkit-linear-gradient(to right, #4B1248, #a29587);
+    background: linear-gradient(to right, #4B1248, #a29587);
+    border-radius: 10px;
     color: var(--text-color);
   }
-  .bajada-contenido {
+
+.bajada-contenido {
     display: none;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
     position: absolute;
     width: 100%;
     overflow: auto;
@@ -122,7 +140,71 @@ nav{
 
 /* Menu */
 
+.menu-title{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    margin: 10px 20px 0 20px;
+}
 
+.menu{
+    display: flexbox;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+}
+
+.menu-card{
+    height: 100px;
+    border: 3px dashed var(--primary-color);
+    border-radius: 10px;
+    background-image: linear-gradient(#000000ce, transparent), url(./assets/alfajores-de-maicena.jpg);
+    background-size: cover;
+    text-align: center;
+    margin: 0px 50px 10px 50px;
+}
+
+.menu-card h2{
+    color: var(--primary-color);
+    font-family: 'Cookie', cursive;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.menu-card p{
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.menu-card:nth-of-type(2){
+    background-image: linear-gradient(#000000ce, transparent), url(./assets/brownie.jpg);
+    background-size: cover;
+}
+
+.menu-card:nth-of-type(3){
+    background-image: linear-gradient(#000000ce, transparent), url(./assets/budin-de-chocolate.jpg);
+    background-size: cover;
+}
+
+/* Menu 2 */
+
+.menu-card-2{
+    background-image: linear-gradient(#000000ce, transparent), url(./assets/cupcake-old.jpg);
+    background-size: cover;
+}
+
+.menu-card-2:nth-of-type(2){
+    background-image: linear-gradient(#000000ce, transparent), url(./assets/cupcake-2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.menu-card-2:nth-of-type(3){
+    background-image: linear-gradient(#000000ce, transparent), url(./assets/cupcake.jpg);
+    background-size: cover;
+}
 
 /* Footer */
 
@@ -135,6 +217,7 @@ nav{
 
 .footer-card-info i{
     margin-right: 5px;
+    font-size: 2rem;
 }
 
 .footer-card-info{
@@ -163,7 +246,8 @@ nav{
 .footer-card-info__rrss_icon i{
     padding: 5px;
     margin-bottom: 5px;
-    border-radius: 15px;
+    font-size: 2.5rem;
+    border-radius: 100%;
     background-color: white;
 }
 
@@ -173,26 +257,57 @@ nav{
     background-color: var(--secundary-color);
 }
 
-
 @media only screen and (min-width: 374px){
 
 .footer-card-info p{
     margin: 0px 60px;
 }
 
-@media only screen and (min-width:380px){
-
-}
-
+.menu-card{
+    min-width: 300px;
+    min-height: 150px;
 }
 
 @media only screen and (min-width: 424px){
+
 
 }
 
 @media only screen and (min-width: 767px){
 
-.main-nav ul, li, a{
+.menu-title{
+    font-size: 3rem;
+}
+
+.footer-cards{
+    justify-content: space-evenly;
+}
+
+.footer-card-info{
+    margin: 20px 200px;
+}
+
+.menu-card{
+    min-width: 300px;
+    min-height: 150px;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.menu-card h2{
+    font-size: 3.5rem;
+}
+
+.menu-card{
+    min-width: 300px;
+    min-height: 150px;
+}
+
+.main-nav a{
     font-size: 3rem;
 }
 
@@ -204,15 +319,33 @@ nav{
     font-size: 1.6rem;
 }
 
-
 }
 
-@media only screen and (min-width: 1000px){
 
-.main-nav ul, li, a{
+@media only screen and (min-width: 1000px) {
+
+.main-nav a{
     font-size: 3rem;
 }
 
+.location{
+    font-size: 3rem;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.menu-card p{
+    margin-top: 50px;
+}
+
+.menu-card{
+    min-width: 300px;
+    min-height: 150px;
+}
 .footer-card-info h3{
     font-size: 2rem;
 }
@@ -225,4 +358,5 @@ nav{
     font-size: 1.8rem;
 }
 
+}
 }
