@@ -81,6 +81,10 @@ nav{
 
 /* Menu desplegable */
 
+.mov{
+    position: sticky;
+}
+
 .bajada h2{
     border-right: none;
     background: #a29587;
@@ -175,9 +179,11 @@ nav{
 
 .menu-card p{
     color: var(--text-color);
-    margin-bottom: 10px;
-    font-size: 1.8rem;
+    font-size: 2.3rem;
+    margin-top: 20px;
     font-family: 'Fira Sans', sans-serif;
+    font-weight: bolder;
+    text-decoration: underline;
 }
 
 .menu-card:nth-of-type(2){
