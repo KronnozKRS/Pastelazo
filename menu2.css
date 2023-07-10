@@ -100,7 +100,6 @@ nav{
     position: relative;
     margin-top: 20px;
     margin-left: 20px;
-    cursor: pointer;
     background: #a29587;
     background: -webkit-linear-gradient(to right, #4B1248, #a29587);
     background: linear-gradient(to right, #4B1248, #a29587);
@@ -117,9 +116,11 @@ nav{
     overflow: auto;
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
   }
+
   .bajada:hover .bajada-contenido {
     display: block;
   }
+
   .bajada-contenido a {
     font-family: 'Fira Sans', sans-serif;
     font-size: 1.8rem;
@@ -128,6 +129,7 @@ nav{
     padding: 5px;
     text-decoration: none;
   }
+
   .bajada-contenido a:hover {
     color: #FFFFFF;
     background-color: #00A4BD;
@@ -145,7 +147,7 @@ nav{
     font-size: 2rem;
     color: var(--text-color);
     background-color: var(--primary-color);
-    margin: 10px 20px 0 20px;
+    margin: 10px 20px 20px 20px;
 }
 
 .menu{
@@ -161,11 +163,11 @@ nav{
     background-image: linear-gradient(#000000ce, transparent), url(./assets/alfajores-de-maicena.jpg);
     background-size: cover;
     text-align: center;
-    margin: 0px 50px 10px 50px;
+    margin: 10px 50px 0px 50px;
 }
 
 .menu-card h2{
-    color: var(--primary-color);
+    color: var(--text-color);
     font-family: 'Cookie', cursive;
     font-weight: bold;
     font-size: 3rem;
