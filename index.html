@@ -7,6 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous">
+    </script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Rye&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
@@ -16,7 +24,8 @@
     <link rel="shortcut icon" href="./assets/logo-pastelazo.png" type="image/x-icon">
     <title>Pastelazo</title>
 </head>
-<body>
+
+<body style="background-color: var(--background-color) ;">
     <header>
         <div class="header-text">
             <h3>Los postres mas ricos directo a tu mesa</h3>
@@ -31,18 +40,39 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="#informacion">Mas info</a></li>
-                <li><a href="https://drive.google.com/file/d/1VK-6oWNXNrouTa1ny7L7iHhzsUJNsqRJ/view?usp=sharing" download="" target="_blank">Descargar menu</a></li>
+                <li><a href="https://drive.google.com/file/d/1VK-6oWNXNrouTa1ny7L7iHhzsUJNsqRJ/view?usp=sharing"
+                        download="" target="_blank">Descargar menu</a></li>
             </ul>
         </div>
     </nav>
     <main>
-        <div class="slider">
-            <ul>
-                <li><img src="./assets/alfajores-de-maicena.jpg" alt="" height="230px"></li>
-                <li><img src="./assets/brownie.jpg" alt="" height="230px"></li>
-                <li><img src="./assets/chocotorta.jpg" alt="" height="230px"></li>
-                <li><img src="./assets/cupcake.jpg" alt="" height="230px"></li>
-            </ul>
+        <div class="container">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                    <div class="carousel-inner pt-3">
+                        <div class="carousel-item active">
+                          <img src="./assets/alfajores-de-maicena.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="./assets/brownie.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="./assets/cupcake-old.jpg" class="d-block w-100" alt="...">
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                      </button>
+                    </div>
         </div>
         <div class="location">
             <h2><i class="fa-solid fa-location-dot"></i>¿Donde estamos?</h2>
@@ -102,7 +132,11 @@
         </div>
     </main>
     <footer id="informacion">
-        <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-17.49,106.09 C169.29,192.94 413.09,21.22 522.01,115.97 L491.53,189.97 L0.00,150.00 Z" style="stroke: none; fill: #a29587;"></path></svg></div>
+        <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M-17.49,106.09 C169.29,192.94 413.09,21.22 522.01,115.97 L491.53,189.97 L0.00,150.00 Z"
+                    style="stroke: none; fill: #a29587;"></path>
+            </svg></div>
         <div class="footer-cards">
             <div class="footer-card-info">
                 <h3><i style="color: rgb(16, 16, 187) ;" class="fa-solid fa-credit-card"></i>PAGÁ COMO QUIERAS!</h3>

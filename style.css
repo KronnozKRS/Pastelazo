@@ -17,47 +17,6 @@ html{
     background-color: var(--background-color);
 }
 
-/* slider */
-
-.slider {
-    overflow: hidden;
-    margin: 20px;
-    width: 90%;
-    border-radius: 10px;
-}
-
-.slider img{
-    width: 100%;
-}
-
-.slider li{
-    width: 100%;
-}
-
-.slider ul{
-    width: 400%;
-    display: flex;
-    animation: deslizar 15s infinite alternate ;
-}
-
-@keyframes deslizar {
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
-
-    25%{margin-left: -100%;}
-    45%{margin-left: -100%;}
-
-    50%{margin-left: -200%;}
-    70%{margin-left: -200%;}
-
-    75%{margin-left: -300%;}
-    100%{margin-left: -300%;}
-}
-
-.slider li{
-    width: 400%;
-}
-
 /* header */
 
 .header-text{
@@ -301,6 +260,10 @@ nav{
 
 @media only screen and (min-width: 374px){
 
+.main-nav ul{
+    padding-left: 0;
+}
+
 .footer-card-info p{
     margin: 0px 60px;
 }
@@ -312,10 +275,7 @@ nav{
 
 @media only screen and (min-width: 424px){
 
-.slider img{
-    width: 380px;
-    height: 250px;
-}
+
 
 }
 
